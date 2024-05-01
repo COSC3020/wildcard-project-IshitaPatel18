@@ -16,7 +16,17 @@ const testSum =
     })
   });
     
-// const testsum
+const testCount =
+  jsc.forall("array string", function(n){
+    let size = [];
+    for(let i = 0; i < n.length; i++)
+      {
+        size[i] = n[i].length;
+      }
+    count(n, function(value){
+      assert(value == size)
+    })
+  });
 
 // const testPrimecount
 
