@@ -14,7 +14,7 @@ const testSum =
     sum(n, function(value){
       assert(value == count)
     })
-  }
+  });
     
 // const testsum
 
