@@ -28,7 +28,28 @@ const testCount =
     })
   });
 
-// const testPrimecount
+const testPrimeCount =
+    jsc.forall("array nat", function(n){
+      let total = 0;
+      let check = true;
+      for(let i = 0; i < n.length; i++)
+        {
+          if(n[i] > 1){
+              let i = 2;
+              while(check == true && i < n.length){
+                  if(item % i == 0){
+                    total++;
+                    check = false;
+                  } else {
+                    i++;
+                  }
+                }
+          }
+        }
+    primeCount(n, function(value){
+      assert(value == total)
+    })
+  });
 
 // const testFib
 
