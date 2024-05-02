@@ -51,7 +51,24 @@ const testPrimeCount =
     })
   });
 
-// const testFib
-
+const testFib =
+   jsc.forall("array nat", function(n){
+     for(let i = 0; i < n.length; i++)
+       {
+          let fib_old = 1;
+          let fib = 1;
+          let fib_new;
+          while (i > 2) 
+          {
+            fib_new = fib + fib_old;
+            fib_old = fib;
+            fib = fib_new;
+            --i;
+          }
+       }
+    fib(n, function(value){
+      assert(value == fib)
+    })
+  });
 // const testMultiTest
 
