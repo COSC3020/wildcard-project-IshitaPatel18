@@ -70,5 +70,19 @@ const testFib =
       assert(value == fib)
     })
   });
-// const testMultiTest
+
+const testMultiTest =
+     jsc.forall("array nat", function(n){
+       let total = 1;
+       for(let i = 0; i < n.length; i++)
+       {
+          if(n[1] > 1)
+          {
+            total *= Math.floor(n[i]/2);
+          }
+       }
+    multiTest(n, function(value){
+      assert(value == total)
+    })
+  });
 
